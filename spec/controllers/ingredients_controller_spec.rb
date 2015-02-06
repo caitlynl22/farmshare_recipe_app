@@ -26,4 +26,24 @@ RSpec.describe IngredientsController do
       expect(assigns(:ingredients)).to eq ingredients
     end
   end
+
+  describe 'GET show' do
+    it 'has a 200 status code' do
+      ingredient = Ingredient.create!(valid_attributes)
+      get :show, id: ingredient
+      expect(response.status).to eq 200
+    end
+
+    it 'renders the show template' do
+      ingredient = Ingredient.create!(valid_attributes)
+      get :show, id: ingredient
+      expect(response).to render_template('show')
+    end
+
+    it 'assigns @ingredient' do
+      ingredient = Ingredient.create!(valid_attributes)
+      get :show, id: ingredient
+      expect(assigns(:ingredient)).to eq ingredient
+    end
+  end
 end

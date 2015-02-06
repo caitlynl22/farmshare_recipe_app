@@ -11,4 +11,12 @@ RSpec.feature 'Managing ingredients' do
     expect(page).to have_content 'Ingredients'
     expect(page).to have_selector 'a', count: 3
   end
+
+  scenario 'Show an ingredient' do
+    ingredient = Ingredient.create!(name: 'Beets')
+
+    visit "/ingredients/#{ingredient.id}"
+
+    expect(page).to have_selector 'h1', count: 1
+  end
 end
