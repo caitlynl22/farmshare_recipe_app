@@ -9,7 +9,7 @@ RSpec.feature 'Managing ingredients' do
     visit '/ingredients'
 
     expect(page).to have_content 'Ingredients'
-    expect(page).to have_selector 'a', count: 3
+    expect(page).to have_selector 'p', count: 3
   end
 
   scenario 'Show an ingredient' do
