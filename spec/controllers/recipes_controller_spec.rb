@@ -17,17 +17,18 @@ RSpec.describe RecipesController do
       expect(response.status).to eq 200
     end
 
-    # it 'renders the index template' do
-    #   article = Article.create!(title: 'Left Shark', body: 'Left Shark is awesome.')
-    #   get :index, article_id: article
-    #   expect(response).to render_template('index')
-    # end
+    it 'renders the show template' do
+      ingredient = Ingredient.create!(name: 'Carrots')
+      recipe = ingredient.recipes.create!(valid_attributes)
+      get :show, id: recipe
+      expect(response).to render_template('show')
+    end
 
-    # it 'assigns @comments' do
-    #   article = Article.create!(title: 'Left Shark', body: 'Left Shark is awesome.')
-    #   comments = Comment.all
-    #   get :index, article_id: article
-    #   expect(assigns(:comments)).to eq comments
-    # end
+    it 'assigns @recipe' do
+      ingredient = Ingredient.create!(name: 'Carrots')
+      recipe = ingredient.recipes.create!(valid_attributes)
+      get :show, id: recipe
+      expect(assigns(:recipe)).to eq recipe
+    end
   end
 end
