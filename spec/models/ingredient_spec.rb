@@ -29,6 +29,6 @@ RSpec.describe Ingredient do
     ingredient.recipes << recipe
 
     expect(ingredient.recipes).to eq([recipe])
-  end
+    end
   end
 end

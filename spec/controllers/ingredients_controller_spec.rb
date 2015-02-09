@@ -45,5 +45,13 @@ RSpec.describe IngredientsController do
       get :show, id: ingredient
       expect(assigns(:ingredient)).to eq ingredient
     end
+
+    it 'assigns @recipes' do
+      ingredient = Ingredient.create!(valid_attributes)
+      recipes = ingredient.recipes
+      get :show, id: ingredient
+      expect(assigns(:recipes)).to eq recipes
+    end
+
   end
 end
