@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  # shallow do
+  shallow do
     resources :ingredients, only: [:index, :show] do
-      # resources :recipes
+      resources :recipes, only: [:show]
     end
-  # end
+  end
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
