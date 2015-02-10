@@ -15,6 +15,6 @@ RSpec.feature 'Managing comments' do
 
     expect(page).to have_content 'Comments'
     expect(page).to have_selector 'p',
-      count: 3
+      count: 4
   end
 end
