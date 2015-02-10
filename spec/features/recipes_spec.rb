@@ -12,7 +12,7 @@ RSpec.feature 'Managing recipes' do
     visit "/ingredients/#{ingredient.id}"
 
     expect(page).to have_content 'Recipes'
-    expect(page).to have_selector 'section',
+    expect(page).to have_selector 'p',
       count: 2
   end
 

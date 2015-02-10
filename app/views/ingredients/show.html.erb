@@ -1,12 +1,5 @@
 <h1><%= @ingredient.name %></h1>
 
 <% @recipes.each do |recipe| %>
-  <section>
-    <h2><%= recipe.title %></h2>
-    <ul>
-      <li><%= recipe.ingredient_list %></li>
-    </ul>
-    <p><%= recipe.instructions %></p>
-
-  </section>
+    <p><%= recipe.title %></p>
 <% end %>

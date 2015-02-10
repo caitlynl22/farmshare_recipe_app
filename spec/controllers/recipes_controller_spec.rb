@@ -30,5 +30,13 @@ RSpec.describe RecipesController do
       get :show, id: recipe
       expect(assigns(:recipe)).to eq recipe
     end
+
+    it 'assigns @comments' do
+      ingredient = Ingredient.create!(name: 'Carrots')
+      recipe = ingredient.recipes.create!(valid_attributes)
+      comments = recipe.comments
+      get :show, id: recipe
+      expect(assigns(:comments)).to eq comments
+    end
   end
 end

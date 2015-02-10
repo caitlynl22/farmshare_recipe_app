@@ -1,1 +1,12 @@
-<h1><%= @recipe.title %></h1>
+<article>
+  <h1><%= @recipe.title %></h1>
+  <ul>
+    <li><%= @recipe.ingredient_list %></li>
+  </ul>
+  <p><%= @recipe.instructions %></p>
+
+<h2>Comments</h2>
+  <% @comments.each do |comment| %>
+    <p><%= comment.name %>, <%= comment.body %></p>
+  <% end %>
+
