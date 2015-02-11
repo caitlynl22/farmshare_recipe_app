@@ -12,11 +12,11 @@ class CommentsController < ApplicationController
   end
 
   def destroy
+    @recipe = Recipe.find(params[:recipe_id])
     @comment = Comment.find(params[:id])
-    @recipe = @comment.recipe
     @comment.destroy
     flash[:success] = 'Comment successfully deleted.'
-    redirect_to ingredients_path
+    redirect_to recipe_path(@recipe)
   end
 
   private

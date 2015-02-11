@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   shallow do
     resources :ingredients, only: [:index, :show] do
       resources :recipes, only: [:show] do
-        resources :comments, only: [:create, :destroy]
+        resources :comments, only: [:create]
+        delete '/comments/:id', to: 'comments#destroy', as: :comment_destroy
       end
     end
   end

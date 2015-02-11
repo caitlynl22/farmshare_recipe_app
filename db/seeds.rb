@@ -1,3 +1,12 @@
+tables = ActiveRecord::Base.connection.tables - ['schema_migrations']
+
+tables.each do |table|
+  # delete all data from the table
+  ActiveRecord::Base.connection.execute "DELETE FROM #{table}"
+  # reset the primary key sequence for this table, start id column at 1
+  ActiveRecord::Base.connection.reset_pk_sequence!("#{table}")
+end
+
 Ingredient.delete_all
 
 carrots = Ingredient.create!(name: 'Carrots')
