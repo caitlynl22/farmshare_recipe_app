@@ -24,6 +24,7 @@ RSpec.feature 'Managing comments' do
 
     visit "/recipes/#{recipe.id}"
 
+    fill_in 'Name', with: 'Bob Cat'
     fill_in 'Body', with: 'Awesome recipe!'
     click_on 'Create Comment'
 
