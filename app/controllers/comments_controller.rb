@@ -11,6 +11,14 @@ class CommentsController < ApplicationController
     end
   end
 
+  def destroy
+    @comment = Comment.find(params[:id])
+    @recipe = @comment.recipe
+    @comment.destroy
+    flash[:success] = 'Comment successfully deleted.'
+    redirect_to ingredients_path
+  end
+
   private
     def comment_params
       params.require(:comment).permit(:name, :body)

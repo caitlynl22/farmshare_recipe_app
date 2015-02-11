@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   shallow do
     resources :ingredients, only: [:index, :show] do
       resources :recipes, only: [:show] do
-        resources :comments, only: [:create]
+        resources :comments, only: [:create, :destroy]
       end
     end
   end
