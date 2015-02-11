@@ -1,4 +1,16 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+}
 
+header p {
+  font-size: 20px;
+}
+
+header {
+  background: #BBBBBB;
+  padding: 20px;
+}
