@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'ingredients#index'
   shallow do
     resources :ingredients, only: [:index, :show] do
       resources :recipes, only: [:show] do
