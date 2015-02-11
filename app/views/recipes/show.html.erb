@@ -1,11 +1,13 @@
 <article>
   <h1><%= @recipe.title %></h1>
   <ul>
-    <li><%= @recipe.ingredient_list %></li>
+    <li><%= @recipe.ingredient_list.html_safe %></li>
   </ul>
   <p><%= @recipe.instructions %></p>
 
-  <%= vegetarian %>
+  <% if @recipe.vegetarian? %>
+  <%= image_tag("vegetarian.png", size: "40x40", alt: "Vegetarian") %>
+  <% end %>
 </article>
 
 <h2>Comments</h2>

@@ -1,5 +1,9 @@
+<div class="col-md-10">
 <h1><%= @ingredient.name %></h1>
+</div>
 
+<div class="col-md-6">
 <% @recipes.each do |recipe| %>
-    <p><%= link_to recipe.title, recipe_path(recipe) %></p>
+    <h2><%= link_to recipe.title, recipe_path(recipe) %></h2>
 <% end %>
+</div>

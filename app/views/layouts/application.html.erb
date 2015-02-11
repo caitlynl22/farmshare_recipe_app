@@ -9,10 +9,12 @@
 </head>
 <body>
   <%= render 'layouts/nav' %>
-  <header>
-    <h1>Local Flavor</h1>
-    <p>Recipes ideas for New England produce</p>
+  <div class="well">
+    <header>
+      <h1>Local Flavor</h1>
+      <p>Recipes ideas for New England produce</p>
   </header>
+  </div>
 <% if flash[:success].present? %>
   <p>
     <%= flash[:success] %>

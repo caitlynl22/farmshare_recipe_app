@@ -1,8 +1,13 @@
+/*
+*= require_self
+*= require_tree .
+
+*/
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 header {
-  background: #BBBBBB;
   padding: 20px;
 }
 
