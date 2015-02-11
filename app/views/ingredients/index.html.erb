@@ -5,5 +5,9 @@
 <div class="col-md-4">
 <% @ingredients.each do |ingredient| %>
   <p><%= link_to ingredient.name, ingredient_path(ingredient) %></p>
+
+  <p><%# = link_to image_tag(ingredient.image_filename), ingredient_path(ingredient) %></p>
+
+
 <% end %>
 </div>
