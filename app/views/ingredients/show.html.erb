@@ -1,9 +1,12 @@
-<div class="col-md-10">
-<h1><%= @ingredient.name %></h1>
-</div>
-
-<div class="col-md-6">
-<% @recipes.each do |recipe| %>
-    <h2><%= link_to recipe.title, recipe_path(recipe) %></h2>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10">
+      <h1><%= @ingredient.name %></h1>
+    </div>
+    <div class="col-md-6 col-xs-12">
+      <% @recipes.each do |recipe| %>
+        <h2><%= link_to recipe.title, recipe_path(recipe) %></h2>
+      <% end %>
+    </div>
+  </div>
 </div>

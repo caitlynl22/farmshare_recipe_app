@@ -1,10 +1,10 @@
 <div class="container-fluid">
 <article>
   <h1><%= @recipe.title %></h1>
-  <p><%= @recipe.ingredient_list.html_safe %></p>
   <% if @recipe.vegetarian? %>
     <%= image_tag("vegetarian.png", alt: "Vegetarian", class: "vegetarian") %>
   <% end %>
+  <p><%= @recipe.ingredient_list.html_safe %></p>
   <p><%= @recipe.instructions %></p>
 </article>
 

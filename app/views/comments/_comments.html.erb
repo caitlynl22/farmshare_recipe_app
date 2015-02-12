@@ -1,5 +1,7 @@
+<section>
 <% @comments.each do |comment| %>
-  <p><%= comment.name %> says: </p>
+  <p class="commenter"><%= comment.name %> says: </p>
   <p><%= comment.body %></p>
   <%= button_to 'Delete Comment', recipe_comment_destroy_path(@recipe,comment), method: :delete, data: { confirm: 'Are you sure?'} %>
 <% end %>
+</section>
