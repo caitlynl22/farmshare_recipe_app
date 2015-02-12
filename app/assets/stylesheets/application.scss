@@ -22,3 +22,18 @@ img.image-to-style {
   width: 350px;
   height: 220px;
 }
+
+img.image-to-style:hover {
+  opacity: 0.4
+}
+
+footer {
+  padding-top: 5px;
+}
+
+img.vegetarian {
+  width: 40px;
+  height: auto;
+  float: right;
+  margin-right: 30px;
+}

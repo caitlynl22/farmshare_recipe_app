@@ -1,13 +1,11 @@
+<div class="container-fluid">
 <article>
   <h1><%= @recipe.title %></h1>
-  <ul>
-    <li><%= @recipe.ingredient_list.html_safe %></li>
-  </ul>
-  <p><%= @recipe.instructions %></p>
-
+  <p><%= @recipe.ingredient_list.html_safe %></p>
   <% if @recipe.vegetarian? %>
-  <%= image_tag("vegetarian.png", size: "40x40", alt: "Vegetarian") %>
+    <%= image_tag("vegetarian.png", alt: "Vegetarian", class: "vegetarian") %>
   <% end %>
+  <p><%= @recipe.instructions %></p>
 </article>
 
 <h2>Comments</h2>
@@ -15,4 +13,5 @@
 <%= render 'comments/comments' %>
 
 <%= render 'comments/form' %>
+</div>
 
