@@ -11,19 +11,15 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'normalize-rails', '~> 3.0.1'
 gem 'sdoc', '~> 0.4.0', group: :doc
-group :development, :test do
-
-  gem 'byebug'
-
-  gem 'web-console', '~> 2.0'
-
-  gem 'spring'
-end
 gem 'newrelic_rpm'
 gem 'rack-cors'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'nokogiri'
+
 group :development, :test do
+  gem 'byebug'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
   gem 'capybara'
   gem 'rubocop'
   gem 'bullet'
