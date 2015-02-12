@@ -7,15 +7,16 @@ tables.each do |table|
   ActiveRecord::Base.connection.reset_pk_sequence!("#{table}")
 end
 
-carrots = Ingredient.create!(name: 'Carrots')
+carrots = Ingredient.create!(name: 'Carrots', image_filename: 'carrots.jpg')
 beets = Ingredient.create!(name: 'Beets', image_filename: 'beets.jpg')
 kale = Ingredient.create!(name: 'Kale', image_filename: 'Kale.jpg')
-kohlrabi = Ingredient.create!(name: 'Kohlrabi')
-garlic_scapes = Ingredient.create!(name: 'Garlic Scapes')
-corn = Ingredient.create!(name: 'Corn')
-pumpkins = Ingredient.create!(name: 'Pumpkins')
-apples = Ingredient.create!(name: 'Apples')
-tomatoes = Ingredient.create!(name: 'Tomatoes')
+kohlrabi = Ingredient.create!(name: 'Kohlrabi', image_filename: 'kohlrabi.jpg')
+garlic_scapes = Ingredient.create!(name: 'Garlic Scapes', image_filename: 'garlic_scapes.jpg')
+corn = Ingredient.create!(name: 'Corn', image_filename: 'corn.jpg')
+tomatoes = Ingredient.create!(name: 'Tomatoes', image_filename: 'tomatoes.jpg')
+pumpkins = Ingredient.create!(name: 'Pumpkins', image_filename: 'pumpkins.jpg')
+apples = Ingredient.create!(name: 'Apples', image_filename: 'apples.jpg')
+
 
 fries = Recipe.create!(title: 'Garden Fries', ingredient_list: "<ul><li>1 lb root vegetables</li><li>1 tbsp olive oil</li><li>1/8 tsp ground red pepper</li><li>1/8 tsp garlic powder</li><li>1/2 tsp Worcestershire sauce</li></ul>", instructions: "Preheat oven to 450. In a large bowl, combine the sliced vegetables, olive oil, red pepper, garlic powder, and Worcestershire and toss to coat well. Lay the vegetables out on a baking sheet in a single layer. Bake for 30 minutes, turning once. Serve the fries hot with your favorite sauce or ketchup!", vegetarian: true)
 coleslaw = Recipe.create!(title: 'Kale-Apple Coleslaw with Poppy Seed Dressing', ingredient_list: "<ul><li>3 tablespoons cider vinegar</li><li>2 tablespoons honey</li><li>2 teaspoons Dijon mustard</li><li>1 1/2 teaspoons poppy seeds</li><li>1/4 teaspoon kosher salt</li><li>Freshly ground black pepper</li><li>3 tablespoons vegetable oil</li><li>1/3 cup small-dice red onion</li><li>1 pound flat-leaf kale</li><li>2 medium Granny Smith or Fuji apples</li></ul>", instructions: "For the dressing: Place the vinegar, honey, mustard, poppy seeds, and salt in a large, nonreactive bowl, season with pepper, and whisk to combine. While whisking constantly, slowly add the oil until all of it is incorporated. Add the onion, stir to combine, and set aside. For the coleslaw: Wash and dry the kale. Cut out and discard the tough stems. Arrange the leaves into stacks, slice crosswise into 1/4-inch ribbons, and add to the bowl with the dressing. Core the apples, cut them into 1-1/2-inch-long matchsticks, and add to the bowl. Toss to combine. Let the coleslaw sit for at least 15 minutes at room temperature and up to 1 day in the refrigerator for the flavors to meld. Toss again before serving.", vegetarian: true)
